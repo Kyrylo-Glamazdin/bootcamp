@@ -14,7 +14,7 @@ void dutch_flag(vector<int> arr, int pivot){
 		}
 	}
 	
-	int p_ind = s_ind + 1;
+	int p_ind = s_ind;
 	for (int i = 0; i < arr.size(); i++){
 		if (arr[i] == pivot){
 			new_arr[p_ind] = arr[i];
