@@ -50,12 +50,12 @@ class FormEdit extends Component{
 		<div id="regularDisplay">
 			<div>
 				<h1>
-					{this.state.firstName}
+                    First Name: {this.state.firstName}
 				</h1>
 			</div>
 			<div>
 				<h1>
-					{this.state.lastName}
+                    Last Name: {this.state.lastName}
 				</h1>
 			</div>
 			<button onClick={this.toggleHidden}>Edit</button>

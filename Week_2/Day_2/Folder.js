@@ -18,19 +18,19 @@ class FormEdit extends Component{
 	render(){
 		if (this.state.isHidden){
 			return <div>
-				<button onClick={this.toggleHidden}>Toggle Visibility</button>
 				<h1>Home</h1>
 					<ul>
 						<li>File1</li>
 						<li>File2</li>
 						<li>File3</li>
 					</ul>
+            <button onClick={this.toggleHidden}>Toggle Visibility</button>
 			</div>
 		}
 		else{
 			return <div>
-						<button onClick={this.toggleHidden}>Toggle Visibility</button>
 						<h1>Home</h1>
+            <button onClick={this.toggleHidden}>Toggle Visibility</button>
 					</div>
 		}
 	}

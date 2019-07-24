@@ -9,7 +9,7 @@ import Folder from './Folder'
 
 ReactDOM.render(
  <div>
- 	<FormEdit firstName="John" lastName="Smith"/>
+ 	<FormEdit firstName="Benjamin" lastName="Burnley"/>
  	<br /><br /><br /><br /><br />
  	<Folder />
  </div>,
