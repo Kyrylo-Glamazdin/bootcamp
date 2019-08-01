@@ -9,13 +9,15 @@ const DECREMENT = "DECREMENT"
 //action types are the way that the mandatory value of our action objects that will be read and processed by the stitch-statement in the reducer function
 export const increment = () =>{
 	return {
-		type: INCREMENT
+		type: INCREMENT,
+		payload: amount
 	}
 }
 
 export const decrement = () => {
 	return {
-		type: DECREMENT
+		type: DECREMENT,
+		payload: amount
 	}
 }
 
@@ -29,9 +31,9 @@ export const decrement = () => {
 export default (state = 0, action) => {
 	switch (action.type){
 		case INCREMENT:
-			return state + 1;
+			return state + action.payload;
 		case DECREMENT:
-			return state - 1;
+			return state - action.payload;
 		default:
 			return state;
 	}
