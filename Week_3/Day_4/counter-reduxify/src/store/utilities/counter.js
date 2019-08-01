@@ -7,14 +7,14 @@ const DECREMENT = "DECREMENT"
 //ACTION CREATORS
 //action creators are typically called in your react components and are usually involved with event handling
 //action types are the way that the mandatory value of our action objects that will be read and processed by the stitch-statement in the reducer function
-export const increment = () =>{
+export const increment = (amount) =>{
 	return {
 		type: INCREMENT,
 		payload: amount
 	}
 }
 
-export const decrement = () => {
+export const decrement = (amount) => {
 	return {
 		type: DECREMENT,
 		payload: amount

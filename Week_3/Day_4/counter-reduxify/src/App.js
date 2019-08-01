@@ -9,7 +9,7 @@ class AppContainer extends Component {
 	constructor(){
 		super();
 		this.state = {
-			amount: ""
+			amount: 0
 		}
 	}
 	handleChange = (event) => {
@@ -19,12 +19,8 @@ class AppContainer extends Component {
 	}
 	render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <AppView counter={this.props.counter} incrementCounter={this.props.incrementCounter} decrementCounter={this.props.decrementCounter} handleChange={this.handleChange} />
-      </header>
-    </div>
-  		);
+        <AppView counter={this.props.counter} incrementCounter={this.props.incrementCounter} decrementCounter={this.props.decrementCounter} handleChange={this.handleChange} amount={this.state.amount} />
+  		)
 	}
 }
 
@@ -36,9 +32,9 @@ const mapState = (state) =>{
 
 const mapDispatch = (dispatch) =>{
 	return {
-		incrementCounter: (amount) => dispatch(increment()),
-		decrementCounter: (amount) => dispatch(decrement())
+		incrementCounter: (amount) => dispatch(increment(amount)),
+		decrementCounter: (amount) => dispatch(decrement(amount))
 	}
 }
 
-export default connect(mapState, mapDispatch);
+export default connect(mapState, mapDispatch)(AppContainer);
