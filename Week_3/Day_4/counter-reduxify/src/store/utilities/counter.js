@@ -21,7 +21,7 @@ const decrement = () => {
 
 //usally put thunks here, but we are not making api call
 
-//REDUCE FUNCTION
+//REDUCER FUNCTION
 //part of the reason why we have to return a default value for our switch statement is because combineReducers will go into our object of reducers and invoke all reducer functions
 //to address the incoming action object. without a default statement, we would return undefined, which would replace the state of that value to be undefined
 //the other reason for having adefault statement is that when an action is written and is sent to the store, all connected componet will fire off 
